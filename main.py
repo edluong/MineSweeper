@@ -6,14 +6,12 @@ from src.game import *
 
 #board = Board(30,16)
 board = Board(8,8)
-g = Game(8)
+g = Game(8,8)
 
-board.print_board()
-
-# size = '8x8'
+#board.print_board()
 
 
-# print(g.get_mines_per_size('8x8'))
+print(g.get_mines_per_size())
 
 
 

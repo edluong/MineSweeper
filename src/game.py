@@ -8,23 +8,28 @@ class Game:
             - calculate game state after inputted is received
     '''
     
-    def __init__(self,size):
+    def __init__(self,row,col):
         # body for the constructor
-        pass
+        self.row = row
+        self.col = col
 
     # 
-    def get_mines_per_size(self,size):
+    def get_mines_per_size(self):
         '''
             returns amount of mines if a difficulty is selected
         '''
         # pre-defined options
         difficulty = {
-            '8x8': 10,
-            '16x16':40,
-            '30x16':99
+            # row sizes, will then contain respective column look up
+            8: {
+                8: 10
+            },
+            16:{
+                16:40
+            },
+            30:{
+                16:99
+            }
         }
 
-        return  difficulty[size]
-    
-
-    
+        return  difficulty[self.row][self.col]
