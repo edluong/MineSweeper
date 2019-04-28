@@ -1,4 +1,21 @@
 # main file to interact with the whole program
 
-from src.console import * # add functions from console using the following format
+#from src.console import * # add functions from console using the following format
+from src.board import *
+from src.game import *
+
+#board = Board(30,16)
+board = Board(8,8)
+g = Game(8)
+
+board.print_board()
+
+# size = '8x8'
+
+
+# print(g.get_mines_per_size('8x8'))
+
+
+
+
 
