@@ -5,7 +5,7 @@ class Game:
     '''
         Features:
             - return the number of mines/flags per difficulty
-            - calculate game state after inputted is received
+            - calculate game state (did the user lose?) after inputted is received
     '''
     
     def __init__(self,row,col):
@@ -22,6 +22,7 @@ class Game:
         difficulty = {
             # row sizes, will then contain respective column look up
             8: {
+                # column size which then will look up how many mines
                 8: 10
             },
             16:{
