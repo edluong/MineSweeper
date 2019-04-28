@@ -24,9 +24,9 @@ class Board:
                     # if at the end of the row
                     if col == self.col - 1:
                         # create an empty row then start on the next one
-                        print(self.board[row][col],end='\n\n')
+                        print(self.board[col][row],end='\n\n')
                     else:
                         # print out each row element with a tab
-                        print(self.board[row][col],end='\t')
+                        print(self.board[col][row],end='\t')
                    
                     
