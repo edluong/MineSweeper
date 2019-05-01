@@ -7,6 +7,12 @@ console = Console()
 console.set_initial_pick()
 
 
+# test 
+print(console.get_initial_pick())
+console.new_board()
+
+
+
 
 
 

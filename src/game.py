@@ -1,5 +1,6 @@
 # will hold the information about the game
 # such as rules about the game
+import random
 
 class Game:
     '''
@@ -41,5 +42,5 @@ class Game:
             and how many mines there are\n
             returns: a random list of squares that will be the mine
         '''
-        pass
+        return random.sample(possible_squares,num_of_mines)
         

@@ -14,7 +14,7 @@ class Board:
         self.row, self.col = row, col
         self.board = [[Square(r,c) for r in range(self.row)] for c in range(self.col)] # initialize empty board
     
-    def get_possible_locations(self,initial_square):
+    def get_possible_squares(self,initial_square):
         '''
             - remove the initial pick location from the list of possible places to choose
             - chooses up to X number of mines for the difficulty chosen
@@ -27,6 +27,20 @@ class Board:
         flat_list.remove(initial_square)
 
         return flat_list
+    
+    def get_possible_squares_obj(self):
+        flat_list = []
+        for row in self.board:
+            for col in row:
+                flat_list.append(col)
+        
+        return flat_list
+    
+    def get_Square(self, coord):
+        pass
+    
+    def update_board(self,mine_list):
+        pass
 
  
     def print_board(self):

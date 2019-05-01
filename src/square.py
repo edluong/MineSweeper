@@ -12,4 +12,4 @@ class Square:
         self.isVisible = True
     
     def __str__(self):
-        return self.coordinates
+        return str(self.coordinates)

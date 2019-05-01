@@ -23,11 +23,12 @@ class Console:
 
         # initialize board and game state
         self.board = Board(row,col)
-        g = Game(row,col)
+        self.game = Game(row,col)
+        self.mine_size = self.game.get_mines_per_size()
 
         # print the initial board
         self.board.print_board()
-        print(g.get_mines_per_size())
+        print(self.mine_size)
 
 
     def setup_difficulty(self):
@@ -51,4 +52,16 @@ class Console:
     
     # test function
     def new_board(self):
-        print(self.board.get_possible_locations(self.get_initial_pick()))
+        print('list of possible choices:')
+        pos_loc = self.board.get_possible_squares(self.get_initial_pick())
+        print(pos_loc)
+
+        print('list of mines chosen:')
+        print(self.game.generate_rand_mine_list(pos_loc,self.mine_size))
+        
+        # print('square coord')
+        # print(str(self.board.get_Square(2,3)))
+
+        print('possible Square obj list')
+        for sq in self.board.get_possible_squares_obj():
+            print(sq.coordinates)
