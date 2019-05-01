@@ -34,3 +34,12 @@ class Game:
         }
 
         return  difficulty[self.row][self.col]
+
+    def generate_rand_mine_list(self, possible_squares, num_of_mines):
+        '''
+            @param: a list of possible squares to pick from
+            and how many mines there are\n
+            returns: a random list of squares that will be the mine
+        '''
+        pass
+        
