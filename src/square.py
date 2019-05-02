@@ -11,5 +11,11 @@ class Square:
     def show_visible(self):
         self.isVisible = True
     
+    def set_as_mine(self):
+        '''
+        setting the Square as a mine
+        '''
+        self.mines = -1
+    
     def __str__(self):
         return str(self.coordinates)

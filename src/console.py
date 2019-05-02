@@ -40,12 +40,12 @@ class Console:
         print(difficulty)
         return int(input('Select Difficulty (1 to 3): '))
     
-    def set_initial_pick(self):
+    def set_initial_pick(self) -> tuple:
         inp = input('Square (fmt: xcoor ycoor): ')
         coord = inp.split(' ')
         row = int(coord[0])
         col = int(coord[1])
-        self.initial_pick = (row,col)   # -> tuple
+        self.initial_pick = (row,col)
     
     def get_initial_pick(self):
         return self.initial_pick
@@ -67,4 +67,10 @@ class Console:
         print('Square coordinates of mines')
         for square in mine_list:
             print(square.coordinates)
+        
+        self.board.update_board(mine_list)
+
+        self.board.print_board()
+
+        
         
