@@ -53,15 +53,18 @@ class Console:
     # test function
     def new_board(self):
         print('list of possible choices:')
-        pos_loc = self.board.get_possible_squares(self.get_initial_pick())
-        print(pos_loc)
+        initial_list = self.board.initial_list(self.board.get_possible_squares(),self.get_initial_pick())
+        print('to see list of square objects')
+        print(initial_list)
+        print('list of possible Squares')
+        for square in initial_list:
+            print(square.coordinates)
 
         print('list of mines chosen:')
-        print(self.game.generate_rand_mine_list(pos_loc,self.mine_size))
+        mine_list = self.game.generate_rand_mine_list(initial_list,self.mine_size)
+        print('Square print out')
+        print(mine_list)
+        print('Square coordinates of mines')
+        for square in mine_list:
+            print(square.coordinates)
         
-        # print('square coord')
-        # print(str(self.board.get_Square(2,3)))
-
-        print('possible Square obj list')
-        for sq in self.board.get_possible_squares_obj():
-            print(sq.coordinates)
